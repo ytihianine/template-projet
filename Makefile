@@ -12,7 +12,7 @@ else
     VENV_BIN := $(ENV_NAME)/bin
 endif
 
-.PHONY: create-py-env
+.PHONY: create-py-env clean install-py-packages install-pre-commit test
 
 create-py-env: ## Créer un nouvel environnement python
 	@echo "Création d'un environnement"
@@ -35,3 +35,14 @@ install-pre-commit: ## Installer pre-commit
 
 test: ## Lancer les tests pytest
 	$(VENV_BIN)/python -m pytest tests/
+
+clean: ## Nettoie les fichiers temporaires
+	@echo "Nettoyage des fichiers temporaires"
+	find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
+	find . -type d -name ".pytest_cache" -exec rm -rf {} + 2>/dev/null || true
+	find . -type d -name ".ruff_cache" -exec rm -rf {} + 2>/dev/null || true
+	find . -type d -name ".mypy_cache" -exec rm -rf {} + 2>/dev/null || true
+	find . -type d -name "*.egg-info" -exec rm -rf {} + 2>/dev/null || true
+	find . -type f -name "*.pyc" -delete
+	find . -type f -name "*.pyo" -delete
+	@echo "✓ Nettoyage terminé"
