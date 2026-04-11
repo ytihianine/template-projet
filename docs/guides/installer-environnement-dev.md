@@ -2,7 +2,7 @@
 
 ## Résumé
 
-À la fin de ce guide, vous aurez un environnement Python fonctionnel avec tous les packages nécessaires au projet installés.
+À la fin de ce guide, vous aurez un environnement Python fonctionnel avec tous les packages nécessaires au projet installés et les hooks pre-commit configurés.
 
 ## Contexte
 
@@ -50,7 +50,31 @@ Cette commande effectue les opérations suivantes :
 - Installe `uv` (gestionnaire de packages performant)
 - Installe les dépendances listées dans `requirements.txt` via `uv`
 
-### 4. Vérifier l'installation
+### 4. Installer les hooks pre-commit
+
+Le projet utilise [pre-commit](https://pre-commit.com/) pour exécuter automatiquement des vérifications avant chaque commit (formatage, linting, validation YAML, etc.).
+
+Installer les hooks Git :
+
+```bash
+make install-pre-commit
+```
+
+Les hooks suivants seront activés :
+- `trailing-whitespace` : supprime les espaces en fin de ligne
+- `end-of-file-fixer` : assure un saut de ligne en fin de fichier
+- `check-yaml` : valide la syntaxe des fichiers YAML
+- `check-added-large-files` : bloque l'ajout de fichiers volumineux
+- `ruff` : linting et tri des imports
+- `ruff-format` : formatage du code Python
+
+Les hooks s'exécuteront automatiquement à chaque `git commit`. Pour les lancer manuellement sur tous les fichiers :
+
+```bash
+pre-commit run --all-files
+```
+
+### 5. Vérifier l'installation
 
 Contrôler que l'environnement est bien configuré :
 
@@ -68,4 +92,6 @@ pip list
 
 - [Documentation officielle venv](https://docs.python.org/3.12/library/venv.html)
 - [Documentation uv](https://github.com/astral-sh/uv)
+- [Documentation pre-commit](https://pre-commit.com/)
+- [Ruff (linter/formateur)](https://docs.astral.sh/ruff/)
 - [Makefile du projet](../../Makefile)
