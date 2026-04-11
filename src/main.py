@@ -1,4 +1,4 @@
-from infra.ping import ping
+from infra.http.ping import ping
 
 
 def main() -> None:

@@ -12,7 +12,7 @@ def ping(url: str) -> bool:
         True if the website responds successfully, False otherwise.
     """
     try:
-        urllib.request.urlopen(url, timeout=5)  # noqa: S310
+        urllib.request.urlopen(url, timeout=5)
     except (URLError, ValueError, OSError):
         return False
     return True
