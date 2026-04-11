@@ -32,3 +32,6 @@ install-py-packages: ## Installer les packages python
 
 install-pre-commit: ## Installer pre-commit
 	$(VENV_BIN)/pre-commit install
+
+test: ## Lancer les tests pytest
+	$(VENV_BIN)/python -m pytest tests/
