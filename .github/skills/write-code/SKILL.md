@@ -32,7 +32,9 @@ Implement a feature or fix a bug following this project's architecture, code sta
 |--------|---------|
 | `src/app/` | Application logic (use cases, orchestration) |
 | `src/utils/` | Pure utility functions, helpers |
-| `src/infra/` | Infrastructure: external systems, APIs, databases |
+| `src/infra/io` | Infrastructure: file systems |
+| `src/infra/database` | Infrastructure: databases |
+| `src/infra/http` | Infrastructure: HTTP requests, APIs |
 | `tests/` | All tests (mirror `src/` structure) |
 
 ### 3. Write the Code
@@ -82,7 +84,7 @@ pre-commit run --all-files
 
 ### 7. Update Documentation
 
-- If the change is user-facing, update relevant files in `docs/`.
+- If the change is user-facing, create or update relevant files in `docs/`.
 - Ensure new public functions have docstrings.
 
 ## Completion Checklist
