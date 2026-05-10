@@ -33,6 +33,8 @@ install-py-packages: ## Installer les packages python
 install-pre-commit: ## Installer pre-commit
 	$(VENV_BIN)/pre-commit install
 
+setup-dev-env: create-py-env install-py-packages install-pre-commit ## Configurer l'environnement de développement
+
 test: ## Lancer les tests pytest
 	$(VENV_BIN)/python -m pytest tests/
 
