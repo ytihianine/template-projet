@@ -1,7 +1,6 @@
 from pathlib import Path
 
 import pytest
-
 from src.infra.io.io_interface import IOInterface
 from src.infra.io.local_filesystem_adapter import LocalFilesystemAdapter
 
@@ -31,7 +30,7 @@ class TestLocalFilesystemAdapter:
         adapter.write(file_path, "héllo wörld")
         result = adapter.read(file_path)
 
-        assert result == "héllo wörld".encode("utf-8")
+        assert result == "héllo wörld".encode()
 
     def test_write_creates_parent_directories(self, tmp_path: Path) -> None:
         """Test that write creates missing parent directories."""

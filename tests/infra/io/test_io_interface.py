@@ -1,7 +1,6 @@
 from typing import Any
 
 import pytest
-
 from src.infra.io.io_interface import IOInterface
 
 

@@ -27,9 +27,7 @@ class TestS3Adapter:
 
         result = adapter.read("path/to/file.txt")
 
-        mock_client.get_object.assert_called_once_with(
-            Bucket="test-bucket", Key="path/to/file.txt"
-        )
+        mock_client.get_object.assert_called_once_with(Bucket="test-bucket", Key="path/to/file.txt")
         assert result == b"file content"
 
     def test_write_bytes_calls_put_object(self) -> None:
@@ -39,9 +37,7 @@ class TestS3Adapter:
 
         adapter.write("path/to/output.bin", b"raw bytes")
 
-        mock_client.put_object.assert_called_once_with(
-            Bucket="test-bucket", Key="path/to/output.bin", Body=b"raw bytes"
-        )
+        mock_client.put_object.assert_called_once_with(Bucket="test-bucket", Key="path/to/output.bin", Body=b"raw bytes")
 
     def test_write_string_encodes_to_utf8(self) -> None:
         """Test that write with a string encodes it to UTF-8 before uploading."""
