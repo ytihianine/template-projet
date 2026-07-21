@@ -30,7 +30,10 @@ install-py-packages: ## Installer les packages python
 	@echo "Installation de uv"
 	$(VENV_BIN)/python -m pip install uv
 	@echo "Installation des packages requis"
-	$(VENV_BIN)/uv pip install -r requirements.txt --python $(VENV_BIN)/python
+	$(VENV_BIN)/uv pip install \
+		--python $(VENV_BIN)/python \
+		--group default \
+		--group dev
 
 install-pre-commit: ## Installer pre-commit
 	$(VENV_BIN)/pre-commit install
