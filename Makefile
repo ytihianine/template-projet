@@ -1,6 +1,6 @@
+# ==================================
 # Variables
-PYTHON_VERSION=3.12
-AIRFLOW_VERSION=3.1.8
+# ==================================
 ENV_NAME = env
 
 # OS detection
@@ -14,6 +14,9 @@ endif
 
 .PHONY: create-py-env clean install-py-packages install-pre-commit test
 
+# ==================================
+# Developpement Environment Setup
+# ==================================
 create-py-env: ## Créer un nouvel environnement python
 	@echo "Création d'un environnement"
 	$(PYTHON) -m venv $(ENV_NAME)
@@ -21,22 +24,29 @@ create-py-env: ## Créer un nouvel environnement python
 	@echo "Activation du nouvel environnement"
 	@echo "Exécuter dans votre terminal: source $(ENV_NAME)/bin/activate"
 
-
 install-py-packages: ## Installer les packages python
 	@echo "Installation/Mise à jour de pip"
 	$(VENV_BIN)/python -m pip install --upgrade pip
 	@echo "Installation de uv"
 	$(VENV_BIN)/python -m pip install uv
-	$(VENV_BIN)/uv pip install --python $(VENV_BIN)/python -r requirements.txt
-
+	@echo "Installation des packages requis"
+	$(VENV_BIN)/uv pip install -r requirements.txt --python $(VENV_BIN)/python
 
 install-pre-commit: ## Installer pre-commit
 	$(VENV_BIN)/pre-commit install
 
 setup-dev-env: create-py-env install-py-packages install-pre-commit ## Configurer l'environnement de développement
 
+# ==================================
+# Tests
+# ==================================
+
 test: ## Lancer les tests pytest
 	$(VENV_BIN)/python -m pytest tests/
+
+# ==================================
+# Clean-up
+# ==================================
 
 clean: ## Nettoie les fichiers temporaires
 	@echo "Nettoyage des fichiers temporaires"
