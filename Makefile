@@ -12,7 +12,7 @@ else
     VENV_BIN := $(ENV_NAME)/bin
 endif
 
-.PHONY: create-py-env clean install-py-packages install-pre-commit test
+.PHONY: create-py-env clean install-py-packages install-pre-commit test pre-commit
 
 # ==================================
 # Developpement Environment Setup
