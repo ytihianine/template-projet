@@ -1,11 +1,10 @@
 {
     "branches": [
-        "main", "next"
+        "main"
     ],
     "plugins": [
         [
-            "@semantic-release/commit-analyzer",
-            {
+            "@semantic-release/commit-analyzer", {
                 "preset": "conventionalcommits"
             }
         ],
@@ -20,7 +19,6 @@
                         {"type": "chore", "hidden": false, "section": "Autres"},
                         {"type": "docs", "hidden": false, "section": "Documentation"},
                         {"type": "style", "hidden": false, "section": "Autres"},
-                        {"type": "refactor", "hidden": false, "section": "Breaking changes"},
                         {"type": "perf", "hidden": false, "section": "Autres"},
                         {"type": "test", "hidden": false, "section": "Autres"}
                     ]
@@ -42,6 +40,5 @@
             }
         ],
         "@semantic-release/github"
-
     ]
 }
