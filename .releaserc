@@ -1,11 +1,15 @@
 {
     "branches": [
-        "main"
+        "main", "next"
     ],
     "plugins": [
         [
             "@semantic-release/commit-analyzer", {
-                "preset": "conventionalcommits"
+                "preset": "conventionalcommits",
+                "releaseRules": [
+                    {"type": "custom", "release": "patch"},
+                    {"type": "release", "release": "major"}
+                ]
             }
         ],
         [
@@ -14,46 +18,16 @@
                 "preset": "conventionalcommits",
                 "presetConfig": {
                     "types": [
-                        {
-                            "type": "feat",
-                            "section": "Features"
-                        },
-                        {
-                            "type": "fix",
-                            "section": "Bug Fixes"
-                        },
-                        {
-                            "type": "perf",
-                            "section": "Performance Improvements"
-                        },
-                        {
-                            "type": "revert",
-                            "section": "Reverts"
-                        },
-                        {
-                            "type": "docs",
-                            "section": "Documentation"
-                        },
-                        {
-                            "type": "style",
-                            "section": "Styles"
-                        },
-                        {
-                            "type": "test",
-                            "section": "Tests"
-                        },
-                        {
-                            "type": "build",
-                            "section": "Build System"
-                        },
-                        {
-                            "type": "ci",
-                            "section": "Continuous Integration"
-                        },
-                        {
-                            "type": "chore",
-                            "section": "Miscellaneous Chores"
-                        }
+                        {"type": "feat", "section": "Features"},
+                        {"type": "fix", "section": "Bug Fixes"},
+                        {"type": "chore", "hidden": true},
+                        {"type": "docs", "hidden": false, "section": "Documentation"},
+                        {"type": "style", "hidden": true},
+                        {"type": "refactor", "hidden": true},
+                        {"type": "perf", "hidden": true},
+                        {"type": "test", "hidden": true},
+                        {"type": "custom", "hidden": false, "section": "Custom"},
+                        {"type": "release", "hidden": true}
                     ]
                 }
             }
@@ -73,5 +47,6 @@
             }
         ],
         "@semantic-release/github"
+
     ]
 }
