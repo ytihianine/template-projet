@@ -1,3 +1,22 @@
+# Changelog
+
+## [0.2.0](https://github.com/ytihianine/template-projet/compare/v0.1.0...v0.2.0) (2026-07-22)
+
+
+### Features
+
+* **ci:** update release please config ([279f716](https://github.com/ytihianine/template-projet/commit/279f716acb48467bf09c7efb8509b185bb59aa7e))
+
+
+### Documentation
+
+* **changelog:** remove old changelog parts ([3086c3a](https://github.com/ytihianine/template-projet/commit/3086c3ac1f0883530095bb8538684bf33a9caad4))
+
+
+### Autres
+
+* **deps:** update googleapis/release-please-action action to v5 ([#18](https://github.com/ytihianine/template-projet/issues/18)) ([cf9ffbe](https://github.com/ytihianine/template-projet/commit/cf9ffbeb1efd72257062e3af6964991f88d5bfc6))
+
 ## 0.1.0 (2026-07-22)
 
 
