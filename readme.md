@@ -62,8 +62,7 @@ Les releases sont gérées automatiquement via [semantic-release](https://semant
 ### Étapes
 
 1. **Développement** : les commits sont réalisés sur des branches de feature/fix avec des messages au format [Conventional Commits](https://www.conventionalcommits.org/) (ex: `feat:`, `fix:`, `chore:`...).
-2. **Pré-release (dry-run)** : merger sur la branche `release` déclenche le workflow `pre-release` qui exécute `semantic-release --dry-run`. Aucune release n'est publiée ; cela permet de vérifier le numéro de version et le changelog qui seraient générés.
-3. **Release** : merger sur `main` déclenche le workflow `release` qui exécute `semantic-release` et publie la release GitHub avec le tag de version et le changelog correspondant.
+2. **Release** : merger sur `main` déclenche le workflow `release` qui exécute `semantic-release` et publie la release GitHub avec le tag de version et le changelog correspondant.
 
 > Les deux workflows peuvent également être déclenchés manuellement depuis l'onglet **Actions** de GitHub.
 
