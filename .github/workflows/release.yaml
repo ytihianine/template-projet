@@ -2,9 +2,6 @@ name: release
 
 on:
   workflow_dispatch: # allows to trigger the workflow manually from the Actions tab in GitHub
-  push:
-      branches:
-      - main
 
 jobs:
   release:
