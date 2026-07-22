@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.1](https://github.com/ytihianine/template-projet/compare/v0.2.0...v0.2.1) (2026-07-22)
+
+
+### Autres
+
+* **ci:** remove node packages ([b7a6b5c](https://github.com/ytihianine/template-projet/commit/b7a6b5c359cf802961cb051c84c5c5313d2a4a24))
+* **deps:** update dependency pre-commit to v4.6.1 ([#19](https://github.com/ytihianine/template-projet/issues/19)) ([73f4eaf](https://github.com/ytihianine/template-projet/commit/73f4eaffc1c54ed620aa7b6246c0bde9bf53bf9b))
+
 ## [0.2.0](https://github.com/ytihianine/template-projet/compare/v0.1.0...v0.2.0) (2026-07-22)
 
 
