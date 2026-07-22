@@ -1,3 +1,5 @@
+## [2.0.0](https://github.com/ytihianine/template-projet/compare/v1.0.0...v2.0.0) (2026-07-22)
+
 ## 1.0.0 (2026-05-25)
 
 ### Features
