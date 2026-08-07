@@ -9,7 +9,7 @@
 [dependency-groups]
 
 default = [
-    "pydantic-settings==2.14.2",
+    "pydantic-settings==2.15.0",
 ]
 
 
