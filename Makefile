@@ -40,8 +40,17 @@ install-pre-commit: ## Installer pre-commit
 
 setup-dev-env: create-py-env install-py-packages install-pre-commit ## Configurer l'environnement de développement
 
+# ==================================
+# Code Quality
+# ==================================
 run-pre-commit: ## Lancer pre-commit
 	$(VENV_BIN)/pre-commit run --all-files
+
+run-complexipy: ## Lancer complexipy
+	$(VENV_BIN)/complexipy . > complexipy_summary_report.txt
+
+run-complexipy-with-refactor-suggestions: ## Lancer complexipy avec suggestions de refactor
+	$(VENV_BIN)/complexipy . --failed --suggest-refactors > complexipy_refactor_report.txt
 
 # ==================================
 # Tests
