@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0](https://github.com/ytihianine/template-projet/compare/v0.2.0...v0.3.0) (2026-08-16)
+
+
+### Features
+
+* **make:** add complexipy command ([0d56d3e](https://github.com/ytihianine/template-projet/commit/0d56d3e462eedfff353b10fb216db176bf1cf903))
+
+
+### Autres
+
+* **ci:** remove node packages ([b7a6b5c](https://github.com/ytihianine/template-projet/commit/b7a6b5c359cf802961cb051c84c5c5313d2a4a24))
+* **deps:** add complexipy ([6fdd268](https://github.com/ytihianine/template-projet/commit/6fdd268b6b2f54a48b92239afa76067aa8a04582))
+* **deps:** update dependency pre-commit to v4.6.1 ([#19](https://github.com/ytihianine/template-projet/issues/19)) ([73f4eaf](https://github.com/ytihianine/template-projet/commit/73f4eaffc1c54ed620aa7b6246c0bde9bf53bf9b))
+* **deps:** update dependency pre-commit to v4.6.2 ([#23](https://github.com/ytihianine/template-projet/issues/23)) ([07d3073](https://github.com/ytihianine/template-projet/commit/07d3073882a5a17d23232e3fa9d1fe55eb6ab433))
+* **deps:** update dependency pydantic-settings to v2.15.0 ([#22](https://github.com/ytihianine/template-projet/issues/22)) ([5dbe4b5](https://github.com/ytihianine/template-projet/commit/5dbe4b5434c4e3cfd2474d01164a8ce6169ef59b))
+
 ## [0.2.0](https://github.com/ytihianine/template-projet/compare/v0.1.0...v0.2.0) (2026-07-22)
 
 
