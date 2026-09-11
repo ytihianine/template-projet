@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/ytihianine/template-projet/compare/v0.3.0...v0.3.1) (2026-09-11)
+
+
+### Autres
+
+* **deps:** update dependency complexipy to v8 ([#24](https://github.com/ytihianine/template-projet/issues/24)) ([aff2f07](https://github.com/ytihianine/template-projet/commit/aff2f07a066a150522ab2481f7987168b496e1a4))
+
 ## [0.3.0](https://github.com/ytihianine/template-projet/compare/v0.2.0...v0.3.0) (2026-08-16)
 
 
