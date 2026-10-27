@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.1](https://github.com/ytihianine/template-projet/compare/v0.3.0...v0.3.1) (2026-10-27)
+
+
+### Autres
+
+* **deps:** update dependency complexipy to v8 ([#24](https://github.com/ytihianine/template-projet/issues/24)) ([aff2f07](https://github.com/ytihianine/template-projet/commit/aff2f07a066a150522ab2481f7987168b496e1a4))
+* **deps:** update dependency complexipy to v8.1.0 ([#29](https://github.com/ytihianine/template-projet/issues/29)) ([83257a2](https://github.com/ytihianine/template-projet/commit/83257a2cd1c38f21f34ad91805697521bd9c83da))
+* **deps:** update dependency pre-commit to v4.7.0 ([#27](https://github.com/ytihianine/template-projet/issues/27)) ([f02dbb9](https://github.com/ytihianine/template-projet/commit/f02dbb9d0081158bf619bfc09063a4d3a16a3236))
+* **deps:** update dependency pydantic-settings to v2.16.1 ([#28](https://github.com/ytihianine/template-projet/issues/28)) ([065a6ab](https://github.com/ytihianine/template-projet/commit/065a6ab9b9425a17426c534ca6a0c1415972e810))
+* **deps:** update dependency python to 3.15 ([#26](https://github.com/ytihianine/template-projet/issues/26)) ([4866e7a](https://github.com/ytihianine/template-projet/commit/4866e7a14cd8e0df0c3a4acbca56f41877207d34))
+* **deps:** update pre-commit hook versions ([9f8a0f5](https://github.com/ytihianine/template-projet/commit/9f8a0f5dec0c5ad1109ee0e1a9ad6daddaaaedbc))
+
 ## [0.3.0](https://github.com/ytihianine/template-projet/compare/v0.2.0...v0.3.0) (2026-08-16)
 
 
